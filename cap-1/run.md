@@ -35,7 +35,17 @@ $> docker run -it debian bash
 ```
 Após isso ele irá entra dentro do terminal do container.
 
-### Nomeando o container (--name "nome_do_container")
+### Nomeando o container (--name "nome_do_container"):
 ```sh 
 $> docker run --name wine_db -it debian bash
+``` 
+Os container tem nomes únicos
+
+### Listando os containers que foram criados:
+```sh 
+$> docker ls -a
+``` 
+### Reutilizando um container previamente criado (a attach):
+```sh 
+$> docker start -ai wine_db
 ``` 
