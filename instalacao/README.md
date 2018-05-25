@@ -39,5 +39,5 @@ $> sudo usermod -aG docker $(whoami)
 
 ### Verificando se o docker foi instalado corretamente
 ```sh
-$> sudo docker run hello-world
+$> docker run hello-world
 ```
