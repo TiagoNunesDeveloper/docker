@@ -30,6 +30,13 @@ $> sudo apt-get update
 $> sudo apt-get install docker-ce
 ```
 
+### Adicionando o usuário ao grupo docker
+```sh
+$> sudo usermod -aG docker $(whoami)
+```
+
+### Desligue e ligue a maquina
+
 ### Verificando se o docker foi instalado corretamente
 ```sh
 $> sudo docker run hello-world
