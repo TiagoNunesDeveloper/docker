@@ -49,3 +49,50 @@ $> docker ls -a
 ```sh 
 $> docker start -ai wine_db
 ``` 
+### Implementando mapeamento de portas
+```sh 
+$> docker run -p 8080:80 nginx
+``` 
+**-p "host:container"**
+
+### Implementando mapeamento de volume
+```sh 
+$> docker run -p 8080:80 -v $(pwd)/html:/usr/share/nginx/html nginx
+``` 
+**-v "host:container"**
+
+### Executando em modo *daemon*
+```sh 
+$> docker run -d --name wine_nginx -p 8080:80 -v $(pwd)/html:/usr/share/nginx/html nginx
+``` 
+**-d** Iniciando o container em background(modo daemon)
+
+### Parando um container pelo seu nome
+```sh 
+$> docker stop wine_nginx
+```
+### Startando um container pelo seu nome:
+```sh 
+$> docker start wine_nginx
+```
+
+### Restartando um container pelo seu nome:
+```sh 
+$> docker restart wine_nginx
+```
+
+### Pegando os logs de um container
+```sh 
+$> docker logs wine_nginx
+```
+
+### Acessando a informação de um container:
+```sh 
+$> docker inspect wine_nginx
+```
+
+### Executando comandos dentro de um container:
+```sh 
+$> docker exec wine_nginx uname -or
+```
+
