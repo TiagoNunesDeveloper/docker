@@ -1,2 +1,2 @@
 FROM nginx:latest
-RUN command
+RUN echo '<h1>Olá estou no DOCKER</h1>' > /usr/share/nginx/html/index.html
